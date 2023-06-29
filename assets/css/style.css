@@ -30,6 +30,41 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+fieldset.grid {
+  display: grid;
+  grid-template-areas: 
+  'length length'
+  'lower upper'
+  'num special'
+  ;
+  grid-template-columns: 1fr 1fr;
+}
+
+fieldset > legend {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+fieldset > .grid-1 {
+  grid-area: length;
+}
+
+fieldset > .grid-2 {
+  grid-area: lower;
+}
+
+fieldset > .grid-3 {
+  grid-area: upper;
+}
+
+fieldset > .grid-4 {
+  grid-area: num;
+}
+
+fieldset > .grid-5 {
+  grid-area: special;
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
