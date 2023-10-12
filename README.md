@@ -2,6 +2,8 @@
 
 With the **JS-Awesome-Password-Generator** you won't need to worry anymore for have secured passwords, with a few clicks you can choose between options to fill your needs.
 
+![App Preview](./assets/img/Screenshot.png)
+
 ## Table of Contents
 
 - [Features](#features)
