@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to generate a random password
   function generatePassword() {
     // Get the password length
-    var passwordLength = parseInt(document.getElementById('password-length').value);
+    let passwordLength = parseInt(document.getElementById('password-length').value);
 
     // Validate the password length
     if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Check for character types
-    var includeLowercase = document.getElementById("include-lowercase").checked;
-    var includeUppercase = document.getElementById("include-uppercase").checked;
-    var includeNumeric = document.getElementById("include-numeric").checked;
-    var includeSpecial = document.getElementById("include-special").checked;
+    let includeLowercase = document.getElementById("include-lowercase").checked;
+    let includeUppercase = document.getElementById("include-uppercase").checked;
+    let includeNumeric = document.getElementById("include-numeric").checked;
+    let includeSpecial = document.getElementById("include-special").checked;
 
     // Validate that at least one character type is selected
     if (
@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Define character pools based on selected character types
-    var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var numericChars = "0123456789";
-    var specialChars = "!@#$%^&*()_+~`|}{[]\\:;?><,./-=";
+    let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let numericChars = "0123456789";
+    let specialChars = "!@#$%^&*()_+~`|}{[]\\:;?><,./-=";
 
-    var characters = "";
+    let characters = "";
     // Add selected character types to the pool
     if (includeLowercase) {
       characters += lowercaseChars;
@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Generate the password
-    var password = "";
+    let password = "";
 
-    for (var i = 0; i < passwordLength; i++) {
+    for (let i = 0; i < passwordLength; i++) {
 
-      var randomIndex = Math.floor(Math.random() * characters.length);
+      let randomIndex = Math.floor(Math.random() * characters.length);
       password += characters[randomIndex];
     }
     return password;
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function that displays the generated password
   function displayPassword() {
-    var password = generatePassword();
-    var passwordField = document.getElementById("password");
+    let password = generatePassword();
+    let passwordField = document.getElementById("password");
     passwordField.textContent = password;
   }
 
